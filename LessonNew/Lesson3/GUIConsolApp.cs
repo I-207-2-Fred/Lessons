@@ -120,7 +120,7 @@ namespace Lesson3
                         else
                         {
                             keepRunning = true;
-                            Console.Clear();
+                            Console.Clear();//hi timor
                         }
                 }
             }
