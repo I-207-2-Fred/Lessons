@@ -1,0 +1,16 @@
+\\edu.local\public\studenthomes\24300455\Desktop\WinApp_207\Lesson\bin\Debug\net10.0-windows\Lesson.exe
+\\edu.local\public\studenthomes\24300455\Desktop\WinApp_207\Lesson\bin\Debug\net10.0-windows\Lesson.deps.json
+\\edu.local\public\studenthomes\24300455\Desktop\WinApp_207\Lesson\bin\Debug\net10.0-windows\Lesson.runtimeconfig.json
+\\edu.local\public\studenthomes\24300455\Desktop\WinApp_207\Lesson\bin\Debug\net10.0-windows\Lesson.dll
+\\edu.local\public\studenthomes\24300455\Desktop\WinApp_207\Lesson\bin\Debug\net10.0-windows\Lesson.pdb
+\\edu.local\public\studenthomes\24300455\Desktop\WinApp_207\Lesson\obj\Debug\net10.0-windows\Lesson.Form1.resources
+\\edu.local\public\studenthomes\24300455\Desktop\WinApp_207\Lesson\obj\Debug\net10.0-windows\Lesson.csproj.GenerateResource.cache
+\\edu.local\public\studenthomes\24300455\Desktop\WinApp_207\Lesson\obj\Debug\net10.0-windows\Lesson.GeneratedMSBuildEditorConfig.editorconfig
+\\edu.local\public\studenthomes\24300455\Desktop\WinApp_207\Lesson\obj\Debug\net10.0-windows\Lesson.AssemblyInfoInputs.cache
+\\edu.local\public\studenthomes\24300455\Desktop\WinApp_207\Lesson\obj\Debug\net10.0-windows\Lesson.AssemblyInfo.cs
+\\edu.local\public\studenthomes\24300455\Desktop\WinApp_207\Lesson\obj\Debug\net10.0-windows\Lesson.csproj.CoreCompileInputs.cache
+\\edu.local\public\studenthomes\24300455\Desktop\WinApp_207\Lesson\obj\Debug\net10.0-windows\Lesson.dll
+\\edu.local\public\studenthomes\24300455\Desktop\WinApp_207\Lesson\obj\Debug\net10.0-windows\refint\Lesson.dll
+\\edu.local\public\studenthomes\24300455\Desktop\WinApp_207\Lesson\obj\Debug\net10.0-windows\Lesson.pdb
+\\edu.local\public\studenthomes\24300455\Desktop\WinApp_207\Lesson\obj\Debug\net10.0-windows\Lesson.genruntimeconfig.cache
+\\edu.local\public\studenthomes\24300455\Desktop\WinApp_207\Lesson\obj\Debug\net10.0-windows\ref\Lesson.dll
