@@ -4,11 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Leasons
 {
@@ -28,7 +29,8 @@ namespace Leasons
             {
                 var result = MessageBox.Show("Создать новый документ? Несохраненные изменения будут потеряны.", "Новый файл", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                if (result == DialogResult.No) return;
+                if (result == DialogResult.No)
+                    return;
             }
 
             richTextBox1.Clear();
@@ -112,7 +114,7 @@ namespace Leasons
             {
                 fontDialog.Font = richTextBox1.Font;
                 fontDialog.Color = richTextBox1.ForeColor;
-                fontDialog.ShowColor = true; 
+                fontDialog.ShowColor = true;
 
                 if (fontDialog.ShowDialog() == DialogResult.OK)
                 {
@@ -125,7 +127,7 @@ namespace Leasons
         {
             Close();
         }
-       
+
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
@@ -141,5 +143,58 @@ namespace Leasons
 
         }
 
+        private void btnUndo_Click(object sender, EventArgs e)
+        {
+            if (richTextBox1.CanUndo)
+            {
+                richTextBox1.Undo();
+            }
+        }
+
+        private void btnCut_Click(object sender, EventArgs e)
+        {
+            if (richTextBox1.SelectionLength > 0)
+            {
+                richTextBox1.Cut();
+            }
+        }
+        private void btnCopy_Click(object sender, EventArgs e)
+        {
+            if (richTextBox1.SelectionLength > 0)
+            {
+                richTextBox1.Copy();
+            }
+        }
+
+        private void btnPaste_Click(object sender, EventArgs e)
+        {
+            if (Clipboard.ContainsText())
+            {
+                richTextBox1.Paste();
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (richTextBox1.SelectionLength > 0)
+            {
+                richTextBox1.SelectedText = "";
+            }
+        }
+
+        private void toolStripStatusLabel6_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void btnSelectAll_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectAll();
+        }
+
+        private void btnDateTime_Click(object sender, EventArgs e)
+        {
+            string currentDateTime = DateTime.Now.ToString();
+            richTextBox1.SelectedText = currentDateTime;
+        }
     }
 }

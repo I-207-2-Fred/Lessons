@@ -43,7 +43,7 @@ namespace Leasons
                 txtscreen.Clear();
                 newOperation = false;
             }
-            if(btn.Text == ",")
+            if (btn.Text == ",")
             {
                 var val = txtscreen.Text.IndexOf(',');
                 if (val != -1)
@@ -51,51 +51,64 @@ namespace Leasons
                     return;
                 }
                 if (btn.Text != ",")
-                firstvalue = Convert.ToDouble(txtscreen.Text);
+                    firstvalue = Convert.ToDouble(txtscreen.Text);
             }
             txtscreen.Text += btn.Text;
         }
 
         private void btnActionResult(object sender, EventArgs e)
         {
-                secondvalue = Convert.ToDouble(txtscreen.Text);
-                switch (operation)
-                {
-                    case "+":
-                        result = firstvalue + secondvalue;
+            secondvalue = Convert.ToDouble(txtscreen.Text);
+            switch (operation)
+            {
+                case "+":
+                    result = firstvalue + secondvalue;
                     newOperation = true;
                     break;
-                    case "-":
-                        result = firstvalue - secondvalue;
+                case "-":
+                    result = firstvalue - secondvalue;
                     newOperation = true;
                     break;
-                    case "*":
-                        result = firstvalue * secondvalue;
+                case "*":
+                    result = firstvalue * secondvalue;
                     newOperation = true;
                     break;
-                    case "/":
-                        result = firstvalue / secondvalue;
+                case "/":
+                    result = firstvalue / secondvalue;
                     newOperation = true;
                     break;
-                    case "^":
-                        result = Math.Pow(firstvalue, secondvalue);
+                case "^":
+                    result = Math.Pow(firstvalue, secondvalue);
                     newOperation = true;
                     break;
-                    case "%":
-                        result = firstvalue % secondvalue;
+                case "%":
+                    result = firstvalue % secondvalue;
                     newOperation = true;
                     break;
                 default:
                     break;
-                }
-            txtscreen.Text = result.ToString();
             }
+            txtscreen.Text = result.ToString();
+        }
         private void btnActionOperation(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
             firstvalue = Convert.ToDouble(txtscreen.Text);
             operation = btn.Text;
             newOperation = true;
+        }
+
+        private void clrbtn_Click(object sender, EventArgs e)
+        {
+            txtscreen.Clear();
+        }
+
+        private void deletebtn_Click(object sender, EventArgs e)
+        {
+            if (txtscreen.Text.Length > 0)
+            {
+                txtscreen.Text = txtscreen.Text.Remove(txtscreen.Text.Length - 1);
+            }
         }
     }
 }
