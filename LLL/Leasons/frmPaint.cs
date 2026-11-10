@@ -1,181 +1,187 @@
-using System;
+Ôªøusing System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO; 
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace Leasons
+namespace WindowsFormsApp1
 {
     public partial class frmPaint : Form
     {
+        bool draw = false;
+        Point oldPoint;
+        string tool = "Pen";
+        Color color = Color.Black;
+        Point startPoint;
+        Point endPoint;
+        int penWidth = 2;
+        int brushWidth = 10;
+        int eraserWidth = 20;
+        Bitmap tempBitmap;
         public frmPaint()
         {
             InitializeComponent();
-            InitializeCanvas(); 
-            pen = new Pen(Color.Black, 3f);
-            pen = new Pen(Color.White, 3f);
-        }
-        private bool isDrawing = false;
-        private Point lastPoint;
-        private Color currentColor = Color.Transparent;
-        private Pen pen;
-        private string currentFilePath = null;
-        private void InitializeCanvas()
-        {
-            if (pctpaint.Image != null) pctpaint.Image.Dispose();
 
-            Bitmap bmp = new Bitmap(pctpaint.Width, pctpaint.Height);
-            using (Graphics g = Graphics.FromImage(bmp))
+            Bitmap bmp = new Bitmap(1200, 800);
+            Graphics g = Graphics.FromImage(bmp);
+            g.Clear(Color.White);
+            pictureBox1.Image = bmp;
+        }
+
+        private void btnPen_Click(object sender, EventArgs e)
+        {
+            tool = "Pen";
+        }
+
+        private void btnBrush_Click(object sender, EventArgs e)
+        {
+            tool = "Brush";
+        }
+
+        private void btnEraser_Click(object sender, EventArgs e)
+        {
+            tool = "Eraser";
+        }
+
+        private void ColorButton_Click(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            color = b.BackColor;
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            draw = true;
+            oldPoint = e.Location;
+            startPoint = e.Location;
+            tempBitmap = new Bitmap((Bitmap)pictureBox1.Image);
+        }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (!draw)
+                return;
+
+            // –ö–∞—Ä–∞–Ω–¥–∞—à, –∫–∏—Å—Ç—å, –ª–∞—Å—Ç–∏–∫
+            if (tool == "Pen" || tool == "Brush" || tool == "Eraser")
             {
-                g.Clear(Color.White); 
-            }
-            pctpaint.Image = bmp;
-        }
+                Graphics g = Graphics.FromImage(pictureBox1.Image);
 
-        private void ˜ÂÌ˚ÈToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            currentColor = Color.Black;
-            pen.Color = Color.Black;
-        }
+                Pen pen;
 
-        private void ·ÂÎ˚ÈToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            currentColor = Color.White;
-            pen.Color = Color.White;
-        }
+                if (tool == "Pen")
+                    pen = new Pen(color, 2);
+                else if (tool == "Brush")
+                    pen = new Pen(color, 10);
+                else
+                    pen = new Pen(Color.White, 20);
 
-        private void ÒÓÁ‰‡Ú¸ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var result = MessageBox.Show("—ÓÁ‰‡Ú¸ ÌÓ‚˚È ËÒÛÌÓÍ?", "ÕÓ‚˚È Ù‡ÈÎ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                g.DrawLine(pen, oldPoint, e.Location);
 
-            if (result == DialogResult.Yes)
-            {
-                InitializeCanvas();
-                currentFilePath = null; 
-                this.Text = "frmPaint"; 
-            }
-        }
+                oldPoint = e.Location;
 
-        private void ÓÚÍ˚Ú¸ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
-            {
-                openFileDialog.Filter = "»ÁÓ·‡ÊÂÌËˇ PNG|*.png|»ÁÓ·‡ÊÂÌËˇ JPEG|*.jpg;*.jpeg|¬ÒÂ Ù‡ÈÎ˚|*.*";
-                openFileDialog.Title = "ŒÚÍ˚Ú¸ ËÒÛÌÓÍ";
-
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                        using (FileStream fs = new FileStream(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
-                        {
-                            Image loadedImage = Image.FromStream(fs);
-                            Bitmap bmp = new Bitmap(pctpaint.Width, pctpaint.Height);
-
-                            using (Graphics g = Graphics.FromImage(bmp))
-                            {
-                                g.Clear(Color.White);
-                                g.DrawImage(loadedImage, 0, 0, pctpaint.Width, pctpaint.Height);
-                            }
-
-                            if (pctpaint.Image != null) pctpaint.Image.Dispose();
-                            pctpaint.Image = bmp;
-                        }
-
-                        currentFilePath = openFileDialog.FileName;
-                        this.Text = "Paint - " + Path.GetFileName(currentFilePath);
-                    }
-            }
-        }
-        private void ÒÓı‡ÌËÚ¸ ‡ÍToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
-            {
-                saveFileDialog.Filter = "»ÁÓ·‡ÊÂÌËÂ PNG|*.png";
-                saveFileDialog.Title = "—Óı‡ÌËÚ¸ Í‡Í...";
-                saveFileDialog.DefaultExt = "png";
-
-                if (saveFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    SaveImageToFile(saveFileDialog.FileName);
-                }
-            }
-        }
-
-        private void ÒÓı‡ÌËÚ¸ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(currentFilePath))
-            {
-                ÒÓı‡ÌËÚ¸ ‡ÍToolStripMenuItem_Click(sender, e);
+                pictureBox1.Refresh();
             }
             else
             {
-                SaveImageToFile(currentFilePath);
-            }
-        }
-        private void SaveImageToFile(string path)
-        {
-                ImageFormat format = ImageFormat.Png;
-                string tempPath = path + ".tmp";
-                pctpaint.Image.Save(tempPath, format);
+                pictureBox1.Image = new Bitmap(tempBitmap);
 
-                if (File.Exists(path)) File.Delete(path);
-                File.Move(tempPath, path);
+                Graphics g = Graphics.FromImage(pictureBox1.Image);
 
-                currentFilePath = path;
-                this.Text = "Paint - " + Path.GetFileName(currentFilePath);
-                MessageBox.Show("‘‡ÈÎ ÛÒÔÂ¯ÌÓ ÒÓı‡ÌÂÌ!", "”ÒÔÂı", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-        private void pctpaint_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (currentColor != Color.Transparent && e.Button == MouseButtons.Left)
-            {
-                isDrawing = true;
-                lastPoint = e.Location;
-            }
-        }
+                int x = Math.Min(startPoint.X, e.X);
+                int y = Math.Min(startPoint.Y, e.Y);
 
-        private void pctpaint_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (isDrawing)
-            {
-                using (Graphics g = Graphics.FromImage(pctpaint.Image))
+                int width = Math.Abs(e.X - startPoint.X);
+                int height = Math.Abs(e.Y - startPoint.Y);
+
+                Pen p = new Pen(color, 2);
+
+                if (tool == "Rectangle")
                 {
-                    g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-                    g.DrawLine(pen, lastPoint, e.Location);
+                    g.DrawRectangle(p, x, y, width, height);
                 }
-                pctpaint.Invalidate();
-                lastPoint = e.Location;
+                else if (tool == "Square")
+                {
+                    int side = Math.Min(width, height);
+                    g.DrawRectangle(p, x, y, side, side);
+                }
+                else if (tool == "Oval")
+                {
+                    g.DrawEllipse(p, x, y, width, height);
+                }
+                else if (tool == "Triangle")
+                {
+                    Point p1 = new Point(x + width / 2, y);
+                    Point p2 = new Point(x, y + height);
+                    Point p3 = new Point(x + width, y + height);
+
+                    g.DrawPolygon(p, new Point[] { p1, p2, p3 });
+                }
+
+                pictureBox1.Refresh();
             }
         }
-
-        private void pctpaint_MouseUp(object sender, MouseEventArgs e)
+        private void btnOval_Click(object sender, EventArgs e)
         {
-            isDrawing = false;
+            tool = "Oval";
+        }
+        private void btnRectangle_Click(object sender, EventArgs e)
+        {
+            tool = "Rectangle";
+        }
+        private void btnSquare_Click(object sender, EventArgs e)
+        {
+            tool = "Square";
+        }
+        private void btnTriangle_Click(object sender, EventArgs e)
+        {
+            tool = "Triangle";
+        }
+        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
+        {
+            draw = false;
+
+            if (tool == "Pen" || tool == "Brush" || tool == "Eraser")
+                return;
+            endPoint = e.Location;
+            Graphics g = Graphics.FromImage(pictureBox1.Image);
+            Pen p = new Pen(color, penWidth);
+            int x = Math.Min(startPoint.X, endPoint.X);
+            int y = Math.Min(startPoint.Y, endPoint.Y);
+            int width = Math.Abs(endPoint.X - startPoint.X);
+            int height = Math.Abs(endPoint.Y - startPoint.Y);
+            if (tool == "Rectangle")
+            {
+                g.DrawRectangle(p, x, y, width, height);
+            }
+            else if (tool == "Square")
+            {
+                int side = Math.Min(width, height);
+                g.DrawRectangle(p, x, y, side, side);
+            }
+            else if (tool == "Oval")
+            {
+                g.DrawEllipse(p, x, y, width, height);
+            }
+            else if (tool == "Triangle")
+            {
+                Point p1 = new Point(x + width / 2, y);
+                Point p2 = new Point(x, y + height);
+                Point p3 = new Point(x + width, y + height);
+                g.DrawPolygon(p, new Point[] { p1, p2, p3 });
+            }
+            pictureBox1.Refresh();
+            tempBitmap = null;
         }
 
-        private void ‚˚ıÓ‰ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-        private void pictureBox1_Click(object sender, EventArgs e) { }
-        private void pictureBox1_MouseEnter(object sender, EventArgs e) { }
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e) { }
-
-        private void toolStripStatusLabel6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmPaint_Load(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
