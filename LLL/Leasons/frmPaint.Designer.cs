@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPaint));
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            ""}, -1, System.Drawing.Color.Empty, System.Drawing.SystemColors.HotTrack, null);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,7 +45,32 @@
             this.видToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.menuStrip5 = new System.Windows.Forms.MenuStrip();
+            this.повернутьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnGlass = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.btnPipette = new System.Windows.Forms.Button();
+            this.btnEraser = new System.Windows.Forms.Button();
+            this.btnLetter = new System.Windows.Forms.Button();
+            this.btnFilling = new System.Windows.Forms.Button();
+            this.btnPencil = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.checkFilling = new System.Windows.Forms.CheckBox();
+            this.menuStrip3 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.овалToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.линияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.прямыйТреугольникToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnBrush = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.btnBrownColor = new System.Windows.Forms.Button();
             this.btnPinkColor = new System.Windows.Forms.Button();
             this.btnPurpleColor = new System.Windows.Forms.Button();
@@ -59,54 +81,17 @@
             this.btnOneColor = new System.Windows.Forms.Button();
             this.btnBlackColor = new System.Windows.Forms.Button();
             this.btnWhiteColor = new System.Windows.Forms.Button();
-            this.btnCopy = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button18 = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnGlass = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.btnPipette = new System.Windows.Forms.Button();
-            this.btnEraser = new System.Windows.Forms.Button();
-            this.btnLetter = new System.Windows.Forms.Button();
-            this.btnFilling = new System.Windows.Forms.Button();
-            this.btnPencil = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnBrush = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button17 = new System.Windows.Forms.Button();
-            this.menuStrip3 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.кругToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.овалToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip5 = new System.Windows.Forms.MenuStrip();
-            this.повернутьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.повернутьНа90ВПравоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.повернутьНа90ВЛевоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.повернутьНа180ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отобразитьПоВертикалиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отобразитьПоГаризонталиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.вставитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вставитьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.вставитьИзToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnCut = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imageList4 = new System.Windows.Forms.ImageList(this.components);
+            this.miniToolStrip = new System.Windows.Forms.MenuStrip();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.menuStrip5.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.menuStrip3.SuspendLayout();
-            this.menuStrip5.SuspendLayout();
-            this.menuStrip2.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,7 +103,7 @@
             this.видToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1033, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(752, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -137,20 +122,20 @@
             // создатьToolStripMenuItem
             // 
             this.создатьToolStripMenuItem.Name = "создатьToolStripMenuItem";
-            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.создатьToolStripMenuItem.Text = "создать";
+            this.создатьToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.создатьToolStripMenuItem.Text = "Cоздать";
             // 
             // открытьToolStripMenuItem
             // 
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.открытьToolStripMenuItem.Text = "открыть ";
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.открытьToolStripMenuItem.Text = "Открыть ";
             // 
             // сохронитьToolStripMenuItem
             // 
             this.сохронитьToolStripMenuItem.Name = "сохронитьToolStripMenuItem";
-            this.сохронитьToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.сохронитьToolStripMenuItem.Text = "сохронить";
+            this.сохронитьToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.сохронитьToolStripMenuItem.Text = "Сохранить";
             // 
             // сохронитьКакToolStripMenuItem
             // 
@@ -158,8 +143,8 @@
             this.изображенияФорматаToolStripMenuItem,
             this.изображенияВФорматеGIFToolStripMenuItem});
             this.сохронитьКакToolStripMenuItem.Name = "сохронитьКакToolStripMenuItem";
-            this.сохронитьКакToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.сохронитьКакToolStripMenuItem.Text = "сохронить как ";
+            this.сохронитьКакToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.сохронитьКакToolStripMenuItem.Text = "Сохранить как";
             // 
             // изображенияФорматаToolStripMenuItem
             // 
@@ -179,8 +164,8 @@
             this.печятьToolStripMenuItem1,
             this.форматСтранициToolStripMenuItem});
             this.печятьToolStripMenuItem.Name = "печятьToolStripMenuItem";
-            this.печятьToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.печятьToolStripMenuItem.Text = "печять";
+            this.печятьToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.печятьToolStripMenuItem.Text = "Печать";
             // 
             // печятьToolStripMenuItem1
             // 
@@ -209,187 +194,53 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Azure;
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.groupBox3);
+            this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.groupBox5);
-            this.panel1.Controls.Add(this.btnCopy);
-            this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1033, 124);
+            this.panel1.Size = new System.Drawing.Size(752, 97);
             this.panel1.TabIndex = 2;
             // 
-            // groupBox5
+            // groupBox1
             // 
-            this.groupBox5.Controls.Add(this.btnBrownColor);
-            this.groupBox5.Controls.Add(this.btnPinkColor);
-            this.groupBox5.Controls.Add(this.btnPurpleColor);
-            this.groupBox5.Controls.Add(this.btnGreenColor);
-            this.groupBox5.Controls.Add(this.btnBluColor);
-            this.groupBox5.Controls.Add(this.btnRedColor);
-            this.groupBox5.Controls.Add(this.btnTwoColor);
-            this.groupBox5.Controls.Add(this.btnOneColor);
-            this.groupBox5.Controls.Add(this.btnBlackColor);
-            this.groupBox5.Controls.Add(this.btnWhiteColor);
-            this.groupBox5.Location = new System.Drawing.Point(728, 3);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(304, 121);
-            this.groupBox5.TabIndex = 19;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "цвет";
+            this.groupBox1.Controls.Add(this.menuStrip5);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.groupBox1.Location = new System.Drawing.Point(3, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(95, 94);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Очистить";
             // 
-            // btnBrownColor
+            // menuStrip5
             // 
-            this.btnBrownColor.BackColor = System.Drawing.Color.Peru;
-            this.btnBrownColor.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnBrownColor.Location = new System.Drawing.Point(260, 49);
-            this.btnBrownColor.Name = "btnBrownColor";
-            this.btnBrownColor.Size = new System.Drawing.Size(35, 27);
-            this.btnBrownColor.TabIndex = 7;
-            this.btnBrownColor.UseVisualStyleBackColor = false;
-            this.btnBrownColor.Click += new System.EventHandler(this.ColorButton_Click);
+            this.menuStrip5.AutoSize = false;
+            this.menuStrip5.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip5.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.повернутьToolStripMenuItem});
+            this.menuStrip5.Location = new System.Drawing.Point(6, 26);
+            this.menuStrip5.Name = "menuStrip5";
+            this.menuStrip5.Size = new System.Drawing.Size(80, 40);
+            this.menuStrip5.TabIndex = 3;
+            this.menuStrip5.Text = "menuStrip5";
             // 
-            // btnPinkColor
+            // повернутьToolStripMenuItem
             // 
-            this.btnPinkColor.BackColor = System.Drawing.Color.HotPink;
-            this.btnPinkColor.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnPinkColor.Location = new System.Drawing.Point(219, 49);
-            this.btnPinkColor.Name = "btnPinkColor";
-            this.btnPinkColor.Size = new System.Drawing.Size(35, 27);
-            this.btnPinkColor.TabIndex = 4;
-            this.btnPinkColor.UseVisualStyleBackColor = false;
-            this.btnPinkColor.Click += new System.EventHandler(this.ColorButton_Click);
-            // 
-            // btnPurpleColor
-            // 
-            this.btnPurpleColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnPurpleColor.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnPurpleColor.Location = new System.Drawing.Point(181, 49);
-            this.btnPurpleColor.Name = "btnPurpleColor";
-            this.btnPurpleColor.Size = new System.Drawing.Size(35, 27);
-            this.btnPurpleColor.TabIndex = 4;
-            this.btnPurpleColor.UseVisualStyleBackColor = false;
-            this.btnPurpleColor.Click += new System.EventHandler(this.ColorButton_Click);
-            // 
-            // btnGreenColor
-            // 
-            this.btnGreenColor.BackColor = System.Drawing.Color.Lime;
-            this.btnGreenColor.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnGreenColor.Location = new System.Drawing.Point(140, 49);
-            this.btnGreenColor.Name = "btnGreenColor";
-            this.btnGreenColor.Size = new System.Drawing.Size(35, 27);
-            this.btnGreenColor.TabIndex = 4;
-            this.btnGreenColor.UseVisualStyleBackColor = false;
-            this.btnGreenColor.Click += new System.EventHandler(this.ColorButton_Click);
-            // 
-            // btnBluColor
-            // 
-            this.btnBluColor.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnBluColor.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnBluColor.Location = new System.Drawing.Point(260, 16);
-            this.btnBluColor.Name = "btnBluColor";
-            this.btnBluColor.Size = new System.Drawing.Size(35, 27);
-            this.btnBluColor.TabIndex = 3;
-            this.btnBluColor.UseVisualStyleBackColor = false;
-            this.btnBluColor.Click += new System.EventHandler(this.ColorButton_Click);
-            // 
-            // btnRedColor
-            // 
-            this.btnRedColor.BackColor = System.Drawing.Color.Red;
-            this.btnRedColor.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnRedColor.Location = new System.Drawing.Point(221, 16);
-            this.btnRedColor.Name = "btnRedColor";
-            this.btnRedColor.Size = new System.Drawing.Size(35, 27);
-            this.btnRedColor.TabIndex = 4;
-            this.btnRedColor.UseVisualStyleBackColor = false;
-            this.btnRedColor.Click += new System.EventHandler(this.ColorButton_Click);
-            // 
-            // btnTwoColor
-            // 
-            this.btnTwoColor.BackColor = System.Drawing.Color.White;
-            this.btnTwoColor.ForeColor = System.Drawing.Color.White;
-            this.btnTwoColor.Location = new System.Drawing.Point(74, 16);
-            this.btnTwoColor.Name = "btnTwoColor";
-            this.btnTwoColor.Size = new System.Drawing.Size(60, 60);
-            this.btnTwoColor.TabIndex = 8;
-            this.btnTwoColor.UseVisualStyleBackColor = false;
-            this.btnTwoColor.Click += new System.EventHandler(this.ColorButton_Click);
-            // 
-            // btnOneColor
-            // 
-            this.btnOneColor.BackColor = System.Drawing.Color.Black;
-            this.btnOneColor.ForeColor = System.Drawing.Color.White;
-            this.btnOneColor.Location = new System.Drawing.Point(8, 16);
-            this.btnOneColor.Name = "btnOneColor";
-            this.btnOneColor.Size = new System.Drawing.Size(60, 60);
-            this.btnOneColor.TabIndex = 9;
-            this.btnOneColor.UseVisualStyleBackColor = false;
-            this.btnOneColor.Click += new System.EventHandler(this.ColorButton_Click);
-            // 
-            // btnBlackColor
-            // 
-            this.btnBlackColor.BackColor = System.Drawing.Color.Black;
-            this.btnBlackColor.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnBlackColor.Location = new System.Drawing.Point(181, 16);
-            this.btnBlackColor.Name = "btnBlackColor";
-            this.btnBlackColor.Size = new System.Drawing.Size(35, 27);
-            this.btnBlackColor.TabIndex = 5;
-            this.btnBlackColor.UseVisualStyleBackColor = false;
-            this.btnBlackColor.Click += new System.EventHandler(this.ColorButton_Click);
-            // 
-            // btnWhiteColor
-            // 
-            this.btnWhiteColor.BackColor = System.Drawing.Color.White;
-            this.btnWhiteColor.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnWhiteColor.Location = new System.Drawing.Point(140, 16);
-            this.btnWhiteColor.Name = "btnWhiteColor";
-            this.btnWhiteColor.Size = new System.Drawing.Size(35, 27);
-            this.btnWhiteColor.TabIndex = 6;
-            this.btnWhiteColor.UseVisualStyleBackColor = false;
-            this.btnWhiteColor.Click += new System.EventHandler(this.ColorButton_Click);
-            // 
-            // btnCopy
-            // 
-            this.btnCopy.BackColor = System.Drawing.Color.SeaShell;
-            this.btnCopy.Location = new System.Drawing.Point(109, 60);
-            this.btnCopy.Name = "btnCopy";
-            this.btnCopy.Size = new System.Drawing.Size(80, 23);
-            this.btnCopy.TabIndex = 5;
-            this.btnCopy.Text = "Копировать";
-            this.btnCopy.UseVisualStyleBackColor = false;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.AutoSize = true;
-            this.groupBox2.Controls.Add(this.button18);
-            this.groupBox2.Controls.Add(this.groupBox3);
-            this.groupBox2.Controls.Add(this.groupBox4);
-            this.groupBox2.Controls.Add(this.groupBox1);
-            this.groupBox2.Controls.Add(this.menuStrip2);
-            this.groupBox2.Controls.Add(this.btnCut);
-            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox2.Location = new System.Drawing.Point(0, 3);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1032, 144);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "буфер обмена";
-            // 
-            // button18
-            // 
-            this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Image = ((System.Drawing.Image)(resources.GetObject("button18.Image")));
-            this.button18.Location = new System.Drawing.Point(18, 22);
-            this.button18.Name = "button18";
-            this.button18.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button18.Size = new System.Drawing.Size(60, 54);
-            this.button18.TabIndex = 8;
-            this.button18.UseMnemonic = false;
-            this.button18.UseVisualStyleBackColor = false;
+            this.повернутьToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.повернутьToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.повернутьToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.повернутьToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
+            this.повернутьToolStripMenuItem.Name = "повернутьToolStripMenuItem";
+            this.повернутьToolStripMenuItem.Size = new System.Drawing.Size(71, 36);
+            this.повернутьToolStripMenuItem.Text = "Очистить";
+            this.повернутьToolStripMenuItem.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // groupBox3
             // 
-            this.groupBox3.AutoSize = true;
             this.groupBox3.Controls.Add(this.btnGlass);
             this.groupBox3.Controls.Add(this.btnPipette);
             this.groupBox3.Controls.Add(this.btnEraser);
@@ -397,12 +248,12 @@
             this.groupBox3.Controls.Add(this.btnFilling);
             this.groupBox3.Controls.Add(this.btnPencil);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox3.Location = new System.Drawing.Point(388, 0);
+            this.groupBox3.Location = new System.Drawing.Point(97, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(103, 121);
+            this.groupBox3.Size = new System.Drawing.Size(103, 94);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "инструменты";
+            this.groupBox3.Text = "Инструменты";
             // 
             // btnGlass
             // 
@@ -505,16 +356,87 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.AutoSize = true;
+            this.groupBox4.Controls.Add(this.checkFilling);
+            this.groupBox4.Controls.Add(this.menuStrip3);
             this.groupBox4.Controls.Add(this.btnBrush);
-            this.groupBox4.Controls.Add(this.listView1);
             this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox4.Location = new System.Drawing.Point(490, 0);
+            this.groupBox4.Location = new System.Drawing.Point(201, 0);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(237, 121);
+            this.groupBox4.Size = new System.Drawing.Size(169, 94);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "фигуры";
+            this.groupBox4.Text = "Фигуры";
+            // 
+            // checkFilling
+            // 
+            this.checkFilling.AutoSize = true;
+            this.checkFilling.Location = new System.Drawing.Point(75, 19);
+            this.checkFilling.Name = "checkFilling";
+            this.checkFilling.Size = new System.Drawing.Size(71, 19);
+            this.checkFilling.TabIndex = 12;
+            this.checkFilling.Text = "Заливка";
+            this.checkFilling.UseVisualStyleBackColor = true;
+            this.checkFilling.Click += new System.EventHandler(this.checkFilling_Click);
+            // 
+            // menuStrip3
+            // 
+            this.menuStrip3.AutoSize = false;
+            this.menuStrip3.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip3.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.menuStrip3.Location = new System.Drawing.Point(75, 40);
+            this.menuStrip3.Name = "menuStrip3";
+            this.menuStrip3.Size = new System.Drawing.Size(80, 40);
+            this.menuStrip3.TabIndex = 4;
+            this.menuStrip3.Text = "menuStrip3";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2,
+            this.toolStripMenuItem3,
+            this.овалToolStripMenuItem,
+            this.линияToolStripMenuItem,
+            this.прямыйТреугольникToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(62, 36);
+            this.toolStripMenuItem1.Text = "Фигуры";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(198, 22);
+            this.toolStripMenuItem2.Text = "Треугольник";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.btnTriangle_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(198, 22);
+            this.toolStripMenuItem3.Text = "Прямоугольник";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.btnRectangle_Click);
+            // 
+            // овалToolStripMenuItem
+            // 
+            this.овалToolStripMenuItem.Name = "овалToolStripMenuItem";
+            this.овалToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.овалToolStripMenuItem.Text = "Овал";
+            this.овалToolStripMenuItem.Click += new System.EventHandler(this.btnEllipse_Click);
+            // 
+            // линияToolStripMenuItem
+            // 
+            this.линияToolStripMenuItem.Name = "линияToolStripMenuItem";
+            this.линияToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.линияToolStripMenuItem.Text = "Линия";
+            this.линияToolStripMenuItem.Click += new System.EventHandler(this.btnLine_Click);
+            // 
+            // прямыйТреугольникToolStripMenuItem
+            // 
+            this.прямыйТреугольникToolStripMenuItem.Name = "прямыйТреугольникToolStripMenuItem";
+            this.прямыйТреугольникToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.прямыйТреугольникToolStripMenuItem.Text = "Прям-ый треугольник";
+            this.прямыйТреугольникToolStripMenuItem.Click += new System.EventHandler(this.btnAngleTriangle_Click);
             // 
             // btnBrush
             // 
@@ -524,227 +446,184 @@
             this.btnBrush.Location = new System.Drawing.Point(7, 19);
             this.btnBrush.Name = "btnBrush";
             this.btnBrush.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnBrush.Size = new System.Drawing.Size(55, 55);
+            this.btnBrush.Size = new System.Drawing.Size(55, 61);
             this.btnBrush.TabIndex = 11;
             this.btnBrush.UseMnemonic = false;
             this.btnBrush.UseVisualStyleBackColor = false;
             this.btnBrush.Click += new System.EventHandler(this.btnBrush_Click);
             // 
-            // listView1
+            // groupBox5
             // 
-            listViewGroup1.Header = "ListViewGroup";
-            listViewGroup1.Name = "listViewGroup1";
-            this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1});
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.listView1.Location = new System.Drawing.Point(68, 16);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(161, 64);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.AutoSize = true;
-            this.groupBox1.Controls.Add(this.button17);
-            this.groupBox1.Controls.Add(this.menuStrip3);
-            this.groupBox1.Controls.Add(this.menuStrip5);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox1.Location = new System.Drawing.Point(192, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(208, 122);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "изображения";
-            // 
-            // button17
-            // 
-            this.button17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Image = global::Leasons.Properties.Resources.icons8_квадрат_90_50;
-            this.button17.Location = new System.Drawing.Point(9, 22);
-            this.button17.Name = "button17";
-            this.button17.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button17.Size = new System.Drawing.Size(66, 49);
-            this.button17.TabIndex = 7;
-            this.button17.UseMnemonic = false;
-            this.button17.UseVisualStyleBackColor = false;
-            // 
-            // menuStrip3
-            // 
-            this.menuStrip3.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
-            this.menuStrip3.Location = new System.Drawing.Point(5, 79);
-            this.menuStrip3.Name = "menuStrip3";
-            this.menuStrip3.Size = new System.Drawing.Size(70, 24);
-            this.menuStrip3.TabIndex = 4;
-            this.menuStrip3.Text = "menuStrip3";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem2,
-            this.toolStripMenuItem3,
-            this.кругToolStripMenuItem,
-            this.овалToolStripMenuItem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(62, 20);
-            this.toolStripMenuItem1.Text = "Фигуры";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(163, 22);
-            this.toolStripMenuItem2.Text = "Треугольник";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.btnTriangle_Click);
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(163, 22);
-            this.toolStripMenuItem3.Text = "Прямоугольник";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.btnRectangle_Click);
-            // 
-            // кругToolStripMenuItem
-            // 
-            this.кругToolStripMenuItem.Name = "кругToolStripMenuItem";
-            this.кругToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.кругToolStripMenuItem.Text = "Круг";
-            // 
-            // овалToolStripMenuItem
-            // 
-            this.овалToolStripMenuItem.Name = "овалToolStripMenuItem";
-            this.овалToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-            this.овалToolStripMenuItem.Text = "Овал";
-            this.овалToolStripMenuItem.Click += new System.EventHandler(this.btnOval_Click);
-            // 
-            // menuStrip5
-            // 
-            this.menuStrip5.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.повернутьToolStripMenuItem});
-            this.menuStrip5.Location = new System.Drawing.Point(102, 79);
-            this.menuStrip5.Name = "menuStrip5";
-            this.menuStrip5.Size = new System.Drawing.Size(86, 24);
-            this.menuStrip5.TabIndex = 3;
-            this.menuStrip5.Text = "menuStrip5";
-            // 
-            // повернутьToolStripMenuItem
-            // 
-            this.повернутьToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
-            this.повернутьToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.повернутьToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.повернутьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.повернутьНа90ВПравоToolStripMenuItem,
-            this.повернутьНа90ВЛевоToolStripMenuItem,
-            this.повернутьНа180ToolStripMenuItem,
-            this.отобразитьПоВертикалиToolStripMenuItem,
-            this.отобразитьПоГаризонталиToolStripMenuItem});
-            this.повернутьToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
-            this.повернутьToolStripMenuItem.Name = "повернутьToolStripMenuItem";
-            this.повернутьToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
-            this.повернутьToolStripMenuItem.Text = "Повернуть";
-            // 
-            // повернутьНа90ВПравоToolStripMenuItem
-            // 
-            this.повернутьНа90ВПравоToolStripMenuItem.Name = "повернутьНа90ВПравоToolStripMenuItem";
-            this.повернутьНа90ВПравоToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
-            this.повернутьНа90ВПравоToolStripMenuItem.Text = "Повернуть на 90 в право";
-            // 
-            // повернутьНа90ВЛевоToolStripMenuItem
-            // 
-            this.повернутьНа90ВЛевоToolStripMenuItem.Name = "повернутьНа90ВЛевоToolStripMenuItem";
-            this.повернутьНа90ВЛевоToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
-            this.повернутьНа90ВЛевоToolStripMenuItem.Text = "Повернуть на 90 в лево ";
-            // 
-            // повернутьНа180ToolStripMenuItem
-            // 
-            this.повернутьНа180ToolStripMenuItem.Name = "повернутьНа180ToolStripMenuItem";
-            this.повернутьНа180ToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
-            this.повернутьНа180ToolStripMenuItem.Text = "Повернуть на 180 ";
-            // 
-            // отобразитьПоВертикалиToolStripMenuItem
-            // 
-            this.отобразитьПоВертикалиToolStripMenuItem.Name = "отобразитьПоВертикалиToolStripMenuItem";
-            this.отобразитьПоВертикалиToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
-            this.отобразитьПоВертикалиToolStripMenuItem.Text = "Отобразить по вертикали ";
-            // 
-            // отобразитьПоГаризонталиToolStripMenuItem
-            // 
-            this.отобразитьПоГаризонталиToolStripMenuItem.Name = "отобразитьПоГаризонталиToolStripMenuItem";
-            this.отобразитьПоГаризонталиToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
-            this.отобразитьПоГаризонталиToolStripMenuItem.Text = "Отобразить по горизонтали ";
+            this.groupBox5.Controls.Add(this.button1);
+            this.groupBox5.Controls.Add(this.button2);
+            this.groupBox5.Controls.Add(this.button3);
+            this.groupBox5.Controls.Add(this.button4);
+            this.groupBox5.Controls.Add(this.btnBrownColor);
+            this.groupBox5.Controls.Add(this.btnPinkColor);
+            this.groupBox5.Controls.Add(this.btnPurpleColor);
+            this.groupBox5.Controls.Add(this.btnGreenColor);
+            this.groupBox5.Controls.Add(this.btnBluColor);
+            this.groupBox5.Controls.Add(this.btnRedColor);
+            this.groupBox5.Controls.Add(this.btnTwoColor);
+            this.groupBox5.Controls.Add(this.btnOneColor);
+            this.groupBox5.Controls.Add(this.btnBlackColor);
+            this.groupBox5.Controls.Add(this.btnWhiteColor);
+            this.groupBox5.Location = new System.Drawing.Point(369, 0);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(382, 94);
+            this.groupBox5.TabIndex = 19;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Цвет";
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(102, 12);
+            this.button1.BackColor = System.Drawing.Color.ForestGreen;
+            this.button1.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.button1.Location = new System.Drawing.Point(340, 49);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Обрезать";
+            this.button1.Size = new System.Drawing.Size(35, 27);
+            this.button1.TabIndex = 13;
             this.button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(102, 37);
+            this.button2.BackColor = System.Drawing.Color.Purple;
+            this.button2.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.button2.Location = new System.Drawing.Point(299, 49);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 39);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Измененить размер";
+            this.button2.Size = new System.Drawing.Size(35, 27);
+            this.button2.TabIndex = 11;
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // menuStrip2
+            // button3
             // 
-            this.menuStrip2.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.вставитьToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(13, 83);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(75, 24);
-            this.menuStrip2.TabIndex = 3;
-            this.menuStrip2.Text = "menuStrip2";
+            this.button3.BackColor = System.Drawing.Color.OrangeRed;
+            this.button3.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.button3.Location = new System.Drawing.Point(340, 16);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(35, 27);
+            this.button3.TabIndex = 10;
+            this.button3.UseVisualStyleBackColor = false;
             // 
-            // вставитьToolStripMenuItem
+            // button4
             // 
-            this.вставитьToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.вставитьToolStripMenuItem1,
-            this.вставитьИзToolStripMenuItem});
-            this.вставитьToolStripMenuItem.Name = "вставитьToolStripMenuItem";
-            this.вставитьToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.вставитьToolStripMenuItem.Text = "Вставить";
+            this.button4.BackColor = System.Drawing.Color.LightGray;
+            this.button4.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.button4.Location = new System.Drawing.Point(301, 16);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(35, 27);
+            this.button4.TabIndex = 12;
+            this.button4.UseVisualStyleBackColor = false;
             // 
-            // вставитьToolStripMenuItem1
+            // btnBrownColor
             // 
-            this.вставитьToolStripMenuItem1.Name = "вставитьToolStripMenuItem1";
-            this.вставитьToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
-            this.вставитьToolStripMenuItem1.Text = "Вставить ";
+            this.btnBrownColor.BackColor = System.Drawing.Color.Peru;
+            this.btnBrownColor.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnBrownColor.Location = new System.Drawing.Point(260, 49);
+            this.btnBrownColor.Name = "btnBrownColor";
+            this.btnBrownColor.Size = new System.Drawing.Size(35, 27);
+            this.btnBrownColor.TabIndex = 7;
+            this.btnBrownColor.UseVisualStyleBackColor = false;
+            this.btnBrownColor.Click += new System.EventHandler(this.ColorButton_Click);
             // 
-            // вставитьИзToolStripMenuItem
+            // btnPinkColor
             // 
-            this.вставитьИзToolStripMenuItem.Name = "вставитьИзToolStripMenuItem";
-            this.вставитьИзToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
-            this.вставитьИзToolStripMenuItem.Text = "Вставить из";
+            this.btnPinkColor.BackColor = System.Drawing.Color.HotPink;
+            this.btnPinkColor.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnPinkColor.Location = new System.Drawing.Point(219, 49);
+            this.btnPinkColor.Name = "btnPinkColor";
+            this.btnPinkColor.Size = new System.Drawing.Size(35, 27);
+            this.btnPinkColor.TabIndex = 4;
+            this.btnPinkColor.UseVisualStyleBackColor = false;
+            this.btnPinkColor.Click += new System.EventHandler(this.ColorButton_Click);
             // 
-            // btnCut
+            // btnPurpleColor
             // 
-            this.btnCut.BackColor = System.Drawing.Color.SeaShell;
-            this.btnCut.Location = new System.Drawing.Point(106, 20);
-            this.btnCut.Name = "btnCut";
-            this.btnCut.Size = new System.Drawing.Size(80, 23);
-            this.btnCut.TabIndex = 4;
-            this.btnCut.Text = "Вырезать";
-            this.btnCut.UseVisualStyleBackColor = false;
+            this.btnPurpleColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnPurpleColor.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnPurpleColor.Location = new System.Drawing.Point(181, 49);
+            this.btnPurpleColor.Name = "btnPurpleColor";
+            this.btnPurpleColor.Size = new System.Drawing.Size(35, 27);
+            this.btnPurpleColor.TabIndex = 4;
+            this.btnPurpleColor.UseVisualStyleBackColor = false;
+            this.btnPurpleColor.Click += new System.EventHandler(this.ColorButton_Click);
+            // 
+            // btnGreenColor
+            // 
+            this.btnGreenColor.BackColor = System.Drawing.Color.Lime;
+            this.btnGreenColor.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnGreenColor.Location = new System.Drawing.Point(140, 49);
+            this.btnGreenColor.Name = "btnGreenColor";
+            this.btnGreenColor.Size = new System.Drawing.Size(35, 27);
+            this.btnGreenColor.TabIndex = 4;
+            this.btnGreenColor.UseVisualStyleBackColor = false;
+            this.btnGreenColor.Click += new System.EventHandler(this.ColorButton_Click);
+            // 
+            // btnBluColor
+            // 
+            this.btnBluColor.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnBluColor.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnBluColor.Location = new System.Drawing.Point(260, 16);
+            this.btnBluColor.Name = "btnBluColor";
+            this.btnBluColor.Size = new System.Drawing.Size(35, 27);
+            this.btnBluColor.TabIndex = 3;
+            this.btnBluColor.UseVisualStyleBackColor = false;
+            this.btnBluColor.Click += new System.EventHandler(this.ColorButton_Click);
+            // 
+            // btnRedColor
+            // 
+            this.btnRedColor.BackColor = System.Drawing.Color.Red;
+            this.btnRedColor.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnRedColor.Location = new System.Drawing.Point(221, 16);
+            this.btnRedColor.Name = "btnRedColor";
+            this.btnRedColor.Size = new System.Drawing.Size(35, 27);
+            this.btnRedColor.TabIndex = 4;
+            this.btnRedColor.UseVisualStyleBackColor = false;
+            this.btnRedColor.Click += new System.EventHandler(this.ColorButton_Click);
+            // 
+            // btnTwoColor
+            // 
+            this.btnTwoColor.BackColor = System.Drawing.Color.White;
+            this.btnTwoColor.ForeColor = System.Drawing.Color.White;
+            this.btnTwoColor.Location = new System.Drawing.Point(74, 16);
+            this.btnTwoColor.Name = "btnTwoColor";
+            this.btnTwoColor.Size = new System.Drawing.Size(60, 60);
+            this.btnTwoColor.TabIndex = 8;
+            this.btnTwoColor.UseVisualStyleBackColor = false;
+            this.btnTwoColor.Click += new System.EventHandler(this.ColorButton_Click);
+            // 
+            // btnOneColor
+            // 
+            this.btnOneColor.BackColor = System.Drawing.Color.Black;
+            this.btnOneColor.ForeColor = System.Drawing.Color.White;
+            this.btnOneColor.Location = new System.Drawing.Point(8, 16);
+            this.btnOneColor.Name = "btnOneColor";
+            this.btnOneColor.Size = new System.Drawing.Size(60, 60);
+            this.btnOneColor.TabIndex = 9;
+            this.btnOneColor.UseVisualStyleBackColor = false;
+            this.btnOneColor.Click += new System.EventHandler(this.ColorButton_Click);
+            // 
+            // btnBlackColor
+            // 
+            this.btnBlackColor.BackColor = System.Drawing.Color.Black;
+            this.btnBlackColor.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnBlackColor.Location = new System.Drawing.Point(181, 16);
+            this.btnBlackColor.Name = "btnBlackColor";
+            this.btnBlackColor.Size = new System.Drawing.Size(35, 27);
+            this.btnBlackColor.TabIndex = 5;
+            this.btnBlackColor.UseVisualStyleBackColor = false;
+            this.btnBlackColor.Click += new System.EventHandler(this.ColorButton_Click);
+            // 
+            // btnWhiteColor
+            // 
+            this.btnWhiteColor.BackColor = System.Drawing.Color.Yellow;
+            this.btnWhiteColor.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnWhiteColor.Location = new System.Drawing.Point(140, 16);
+            this.btnWhiteColor.Name = "btnWhiteColor";
+            this.btnWhiteColor.Size = new System.Drawing.Size(35, 27);
+            this.btnWhiteColor.TabIndex = 6;
+            this.btnWhiteColor.UseVisualStyleBackColor = false;
+            this.btnWhiteColor.Click += new System.EventHandler(this.ColorButton_Click);
             // 
             // pictureBox1
             // 
@@ -752,10 +631,9 @@
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(0, 151);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1033, 380);
+            this.pictureBox1.Size = new System.Drawing.Size(752, 380);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
@@ -769,10 +647,21 @@
             this.imageList4.Images.SetKeyName(1, "icons8-квадрат-90-50.png");
             this.imageList4.Images.SetKeyName(2, "icons8-кисть-50.png");
             // 
+            // miniToolStrip
+            // 
+            this.miniToolStrip.AccessibleName = "Выбор нового элемента";
+            this.miniToolStrip.AccessibleRole = System.Windows.Forms.AccessibleRole.ComboBox;
+            this.miniToolStrip.AutoSize = false;
+            this.miniToolStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.miniToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.miniToolStrip.Name = "miniToolStrip";
+            this.miniToolStrip.Size = new System.Drawing.Size(80, 40);
+            this.miniToolStrip.TabIndex = 3;
+            // 
             // frmPaint
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1033, 527);
+            this.ClientSize = new System.Drawing.Size(752, 527);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
@@ -782,20 +671,15 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.menuStrip3.ResumeLayout(false);
-            this.menuStrip3.PerformLayout();
             this.menuStrip5.ResumeLayout(false);
             this.menuStrip5.PerformLayout();
-            this.menuStrip2.ResumeLayout(false);
-            this.menuStrip2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.menuStrip3.ResumeLayout(false);
+            this.menuStrip3.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -822,30 +706,12 @@
         private System.Windows.Forms.Button btnBluColor;
         private System.Windows.Forms.Button btnRedColor;
         private System.Windows.Forms.Button btnBlackColor;
-        private System.Windows.Forms.Button btnCopy;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.MenuStrip menuStrip3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.MenuStrip menuStrip5;
-        private System.Windows.Forms.ToolStripMenuItem повернутьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem повернутьНа90ВПравоToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem повернутьНа90ВЛевоToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem повернутьНа180ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem отобразитьПоВертикалиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem отобразитьПоГаризонталиToolStripMenuItem;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem вставитьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem вставитьToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem вставитьИзToolStripMenuItem;
-        private System.Windows.Forms.Button btnCut;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnOneColor;
         private System.Windows.Forms.Button btnTwoColor;
@@ -862,12 +728,20 @@
         private Button btnEraser;
         private Button btnLetter;
         private Button btnFilling;
-        private Button button18;
         private Button btnBrush;
-        private Button button17;
         private ImageList imageList4;
-        private ToolStripMenuItem кругToolStripMenuItem;
         private ToolStripMenuItem овалToolStripMenuItem;
+        private ToolStripMenuItem линияToolStripMenuItem;
+        private ToolStripMenuItem прямыйТреугольникToolStripMenuItem;
+        private Button button1;
+        private Button button2;
+        private Button button3;
+        private Button button4;
+        private GroupBox groupBox1;
+        private MenuStrip menuStrip5;
+        private ToolStripMenuItem повернутьToolStripMenuItem;
+        private MenuStrip miniToolStrip;
+        private CheckBox checkFilling;
     }
 }
 
