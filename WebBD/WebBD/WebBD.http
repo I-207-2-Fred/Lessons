@@ -1,0 +1,6 @@
+@WebBD_HostAddress = http://localhost:5251
+
+GET {{WebBD_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
